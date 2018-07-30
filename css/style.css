@@ -21,6 +21,10 @@ a:hover {
 a:active {
 	color: #fff;
 }
+img {
+	max-width: 100%;
+  	height: auto;
+}
 .input-field {
 	position: relative;
 	display: inline-block;
@@ -85,7 +89,8 @@ textarea:focus:-ms-input-placeholder {
 	border-radius: 30px;
 	box-shadow: 0 2px 2px rgba(160,70,60,.7)
 }
-.btn:hover {
+.btn:hover,
+.btn:focus {
 	background: linear-gradient(to bottom, #f58669 50%, #ec6f5e 100%);
 	color: #fff;
 }
@@ -126,11 +131,12 @@ textarea:focus:-ms-input-placeholder {
 	clear: both;
 }
 .logo {
-	width: 155px; 
-	height: 65px;
+	width: 154px; 
+	height: 64px;
 	float: left;
 	margin-top: 10px;
 	margin-right: 16px;
+	fill: #fff;
 }
 .main_nav {
 	width: 550px;
@@ -332,11 +338,11 @@ textarea:focus:-ms-input-placeholder {
 	text-decoration-color: rgba(236,89,60,.5)
 }
 .basket_btn {
-	background: #a1b6aa url(../img/icons/busket.svg) no-repeat 15% 50%;
+	background: #a1b6aa url(../img/icons/basket.svg) no-repeat 15% 50%;
 	padding-left: 45px;
 }
 .basket_btn:hover, .basket_btn_active {
-	background: #fff url(../img/icons/busket_hover.svg) no-repeat 15% 50%;
+	background: #fff url(../img/icons/basket_hover.svg) no-repeat 15% 50%;
 	color: #000;
 }
 .basket_inside {
@@ -424,10 +430,12 @@ textarea:focus:-ms-input-placeholder {
 	text-align: right;
 }
 .info_tel {
+	display: block;
 	color: #fff;
 	font-weight: 900;
 	font-size: 22px;
 	text-align: right;
+	text-decoration: none;
 }
 /*===========================SLIDER============================*/
 .wrapper_slaider {
@@ -556,25 +564,31 @@ textarea:focus:-ms-input-placeholder {
 	border-radius: 150px;
 }
 .hit_icon {
-	width: 60px;
-	height: 60px;
+	width: 61px;
+	height: 61px;
 	position: absolute;
 	border-radius: 30px;
+	fill: #231f20;
 }
 .price {
 	position: absolute;
 	vertical-align: middle;
-	top: 185px;
+	top: 223px;
+}
+.price span {
 	font-weight: 700;
 	font-size: 45px;
 	line-height: 13px;
 	color: #fff;
 }
-.price img {
-	vertical-align: middle;
-	margin: 0 -10px;
+.price svg {
+	width: 31px;
+	height: 36px;
+	margin-right: -4px;
+	margin-bottom: -3px;
+	fill: #fff;
 }
-.price span {
+.price .measure {
 	font-size: 30px;
 }
 .description {
@@ -629,10 +643,11 @@ textarea:focus:-ms-input-placeholder {
 	float: right;
 	margin-right: 20px;
 }
-.about li img {
+.about li svg {
 	width: 49px;
 	height: 49px;
 	position: absolute;
+	fill: #323232;
 }
 .about li p {
 	line-height: 22px;
@@ -760,10 +775,11 @@ textarea:focus:-ms-input-placeholder {
 	left: 50%;
 	z-index: 5;
 	background: #fff;
-	width: 500px;
-	height: 500px;
-	margin-left: -250px;
-	margin-bottom: -250px;
+	width: 480px;
+	padding-bottom: 25px;
+	border-radius: 8px;
+	margin-left: -240px;
+	margin-bottom: -240px;
 }
 .modal_show {
 	display: block;
@@ -810,8 +826,8 @@ textarea:focus:-ms-input-placeholder {
 	margin: 15px 20px;
 }
 .modal_content textarea {
-	width: 453px;
-	height: 195px;
+	width: 418px;
+	height: 160px;
 	font-weight: 700;
 	padding: 10px;
 	border: 1px solid #d3d3d2;
@@ -881,11 +897,12 @@ textarea:focus:-ms-input-placeholder {
 	position: relative;
 	font-weight: 700;
 }
-.additional img {
-	width: 13px;
+.additional svg {
+	width: 15px;
 	height: 13px;
 	position: absolute;
 	left: -20px;
+	fill: #fff;
 }
 .made {
 	width: 267px;
@@ -958,7 +975,8 @@ textarea:focus:-ms-input-placeholder {
 select::-ms-expand {
   display: none;
 }
-.filter_sorting:hover {
+.filter_sorting:hover,
+.filter_sorting:focus {
 	background: #fff;
 	color: #000;
 }
@@ -1111,8 +1129,10 @@ select::-ms-expand {
 	border-radius: 15px;
 	margin-top: 1px;
 	outline: none;
+	cursor: pointer;
 }
-.apply_btn:hover {
+.apply_btn:hover,
+.apply_btn:focus {
 	background: #fff;
 	color: #000;
 }
@@ -1141,6 +1161,12 @@ select::-ms-expand {
 	color: #fff;
 	list-style: none;
 	margin-top: 45px;
+}
+.paginator svg{
+	fill: #c1c6ce;
+}
+.icon-right-left {
+	transform: rotate(180deg);
 }
 .paginator a {
 	display: inline-block;
@@ -1187,8 +1213,8 @@ select::-ms-expand {
   left: 0;
   top: 15px;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
-  outline: none;
 }
 .main-header--closed .main-nav__toggle::before {
   background: #fff;
@@ -1306,7 +1332,8 @@ select::-ms-expand {
 	max-width: 100%;
 }
 .banners h2 {
-	font-size: 25px;
+	font-size: 24px;
+	padding-top: 13px;
 }
 .banners p {
 	font-size: 16px;
@@ -1336,14 +1363,16 @@ select::-ms-expand {
 	margin-left: 35px;
 }
 .price {
-	top: 100px;
-	font-size: 35px;
-}
-.price img {
-	width: 28px;
-	height: 28px;
+	top: 120px;
 }
 .price span {
+	font-size: 32px;
+}
+.price svg {
+	width: 22px;
+	height: 27px;
+}
+.price .measure {
 	font-size: 28px;
 }
 .description {
@@ -1370,7 +1399,7 @@ select::-ms-expand {
 	float: none;
 	margin: 15px;
 }
-.about li img {
+.about li svg {
 	width: 20px;
 	height: 20px;
 }
@@ -1410,6 +1439,12 @@ select::-ms-expand {
 }
 .additional {
 	margin-left: 20px;
+}
+.filters {
+	margin-bottom: 25px;	
+}
+.catalog_pages {
+	text-align: center;
 }
 .top_navigation {
 	margin-top: 10px;
@@ -1465,7 +1500,7 @@ select::-ms-expand {
 .about li {
 	width: 45%;
 }
-.about li img {
+.about li svg {
 	width: 40px;
 	height: 40px;
 }
