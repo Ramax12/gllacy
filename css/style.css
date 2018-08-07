@@ -256,21 +256,45 @@ textarea:focus:-ms-input-placeholder {
 	float: right;
 	margin: 23px 0;
 }
-.search, .login, .basket {
+.user-block_item {
 	position: relative;
 	float: right;
 	margin-left: 10px;
 }
-.search_btn {
-	display: inline-block;
-	vertical-align: top;
-	background: #a1b6aa url(../img/icons/search.svg) no-repeat 50%;
-	width: 33px;
-	height: 33px;
+.user-block_btn {
+	background: #a1b6aa;
 	border-radius: 20px;
+	font-weight: 500;
 }
-.search_btn:hover {
-	background: #fff url(../img/icons/search_hover.svg) no-repeat 50%;
+.user-block_btn svg {
+	display: inline-block;
+	vertical-align: middle;
+	fill: #fff;
+}
+.user-block_btn span {
+	vertical-align: middle;
+	color: #fff;
+	padding-left: 2px;
+}
+.basket_btn:hover {
+	color: #fff;
+}
+.search_btn:hover,
+.login_btn:hover,
+.basket_btn_active:hover,
+.login_btn:hover span,
+.basket_btn_active:hover span {
+	background: #fff;
+	color: #000;
+	cursor: pointer;
+}
+.search_btn:hover svg,
+.login_btn:hover svg,
+.basket_btn_active:hover svg {
+	fill: #000;
+}
+.search_btn {
+	padding: 7px 8px;
 }
 .wrapper_block {
 	display: none;
@@ -295,24 +319,8 @@ textarea:focus:-ms-input-placeholder {
 	height: 37px;
 	margin: 15px;
 }
-.login_btn, .basket_btn {
-	display: block;
-	width: 77px;
-	height: 33px;
-	font-weight: 500;
-	color: #fff;
-	line-height: 33px;
-	border-radius: 20px;
-	text-decoration: none;
-}
 .login_btn {
-	background: #a1b6aa url(../img/icons/enter.svg) no-repeat 20% 50%;
-	padding-right: 13px;
-	text-align: right;
-}
-.login_btn:hover {
-	background: #fff url(../img/icons/enter_hover.svg) no-repeat 20% 50%;
-	color: #000;
+	padding: 7px 15px;
 }
 .enter_btn {
 	height: 35px;
@@ -338,12 +346,8 @@ textarea:focus:-ms-input-placeholder {
 	text-decoration-color: rgba(236,89,60,.5)
 }
 .basket_btn {
-	background: #a1b6aa url(../img/icons/basket.svg) no-repeat 15% 50%;
-	padding-left: 45px;
-}
-.basket_btn:hover, .basket_btn_active {
-	background: #fff url(../img/icons/basket_hover.svg) no-repeat 15% 50%;
-	color: #000;
+	padding: 7px 18px;
+	padding-right: 35px;
 }
 .basket_inside {
 	background: #fff;
@@ -419,22 +423,20 @@ textarea:focus:-ms-input-placeholder {
 	float: right;
 	padding: 8px 20px;
 }
-.user-block > div:hover .wrapper_block, 
-.user-block > div:hover .wrapper_block::before  {
-	display: block;
-} 
+.info {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;	
+}
 .info_schedule {
 	color: #fff;
 	font-weight: 700;
 	font-size: 14px;
-	text-align: right;
 }
 .info_tel {
-	display: block;
 	color: #fff;
 	font-weight: 900;
 	font-size: 22px;
-	text-align: right;
 	text-decoration: none;
 }
 /*===========================SLIDER============================*/
@@ -853,30 +855,18 @@ textarea:focus:-ms-input-placeholder {
 .social_btn {
 	display: inline-block;
 	vertical-align: top;
-	width: 30px;
-	height: 30px;
+	width: 32px;
+	height: 32px;
 	border: 3px solid #c2cec7;
 	border-radius: 20px;
 	margin-top: 35px;
 	margin-right: 15px;
 }
+.social_btn svg {
+	fill: #fff;
+}
 .social_btn:hover {
 	border: 3px solid #dbe3de;
-}
-.social_btn:active {
-	box-shadow: inset 0 4px 4px rgba(104,104,104,.6);
-}
-.social_btn_twitter {
-	background: url(../img/icons/twitter.svg);
-}
-.social_btn_instagram {
-	background: url(../img/icons/instagram.svg);
-}
-.social_btn_facebook {
-	background: url(../img/icons/facebook.svg);
-}
-.social_btn_vkontakte {
-	background: url(../img/icons/vkontakte.svg);
 }
 .additional {
 	width: 330px;
@@ -1096,7 +1086,7 @@ select::-ms-expand {
 .filter_fillers input:checked + label span::after {
 	display: block;
 	content: "";
-	background: url(../img/icons/checkbox_checked.svg);
+	background: url(../img/checkbox_checked.svg);
 	width: 16px;
   	height: 16px;
   	border: none;
@@ -1286,41 +1276,47 @@ select::-ms-expand {
 	padding: 5px 30px;
 }
 .user-block {
-	background: linear-gradient(to right, #849d8f, #a7b8ad, #849d8f);
 	width: 225px;
 	float: none;
-	padding-left: 40px;
-	margin: 5px 0;
+	margin: 10px 0;
 }
-.user-block > div:hover .wrapper_block, 
-.user-block > div:hover .wrapper_block::before  {
-	display: none;
-}
-.search, .login, .basket {
+.user-block_item {
+	background: linear-gradient(to right, #849d8f, #a7b8ad, #849d8f);
+	width: 100%;
 	float: none;
+	padding: 5px 0;
+	padding-left: 40px;
 	margin-left: 0;
+	margin-top: 10px;
 }
-.search_btn, .login_btn, .basket_btn {
+.user-block_btn {
 	background: none;
 	width: 100%;
-	padding: 2px 0;
+	padding: 12px 0;
 	padding-left: 15px;
 	border-radius: 4px;
-	text-align: left;
-	text-decoration: none;
 }
-.search_btn:hover, .login_btn:hover, .basket_btn:hover {
+.user-block_btn svg{
+	display: none;
+}
+.user-block_btn:hover {
 	background: #fff;
 }
 .search_btn::before {
 	content: "Поиск";
-	line-height: 33px;
+	color: #fff;
 }
 .basket_btn::before {
 	content: "Корзина: ";
-}
-.basket_btn_active {
 	color: #fff;
+}
+.search_btn:hover::before,
+.basket_btn:hover::before,
+.user-block_btn:hover span {
+	color: #000;
+}
+.wrapper_block {
+	top: 60px;
 }
 .wrapper_slaider {
 	display: none;
@@ -1389,7 +1385,7 @@ select::-ms-expand {
 }
 .seo h2 {
 	font-size: 18px;
-	line-height: 28px;
+	line-height: 24px;
 }
 .about li {
 	width: 90%;
