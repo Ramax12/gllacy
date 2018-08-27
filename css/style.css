@@ -103,7 +103,6 @@ textarea:focus:-ms-input-placeholder {
 	background: #849d8f;
 	max-width: 1160px;
 	height: 100%;
-	padding: 0 20px;
 	margin: 0 auto;
 	-webkit-transition: background 1.5s ease;
 	transition: background 1.5s ease;
@@ -129,6 +128,9 @@ textarea:focus:-ms-input-placeholder {
 	display: table;
 	content: "";
 	clear: both;
+}
+.main-header {
+	padding: 0 20px;
 }
 .logo {
 	width: 154px; 
@@ -426,7 +428,8 @@ textarea:focus:-ms-input-placeholder {
 .info {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-end;	
+	align-items: flex-end;
+	padding: 0 20px;	
 }
 .info_schedule {
 	color: #fff;
@@ -442,6 +445,7 @@ textarea:focus:-ms-input-placeholder {
 /*===========================SLIDER============================*/
 .wrapper_slaider {
 	position: relative;
+	padding: 0 20px;
 }
 .slaider {
 	width: 700px;
@@ -473,10 +477,10 @@ textarea:focus:-ms-input-placeholder {
 	cursor: pointer;
 }
 .controls-direction label:nth-child(2) {
-	left: 30px;
+	left: 50px;
 }
 .controls-direction label:nth-child(3) {
-	left: 60px;
+	left: 80px;
 }
 .controls-direction label:hover {
 	background: #b2c1b7;
@@ -499,8 +503,8 @@ textarea:focus:-ms-input-placeholder {
 
 .banners {
 	max-width: 100%;
-	width: 1150px;
 	color: #fff;
+	padding: 0 20px;
 }
 .banners h2 {
 	font-weight: 700;
@@ -543,16 +547,22 @@ textarea:focus:-ms-input-placeholder {
 .hits, .catalog {
 	position: relative;
 	max-height: 340px;
-	padding: 0;
+	padding: 0 20px;
 	margin: 30px 0;
 }
 .item_hover {
 	position: relative;
 	display: inline-block;
 	vertical-align: top;
-	width: 265px;
+	width: 262px;
 	min-height: 400px;
 	padding: 10px 10px;
+}
+.item_hover:nth-child(1) {
+	padding-left: 0;
+}
+.item_hover:nth-last-child(1) {
+	padding-right: 0;
 }
 .item_hover:hover {
 	z-index: 1;
@@ -617,8 +627,8 @@ textarea:focus:-ms-input-placeholder {
 
 .seo {
 	background: #f0e6ce url(../img/wafer.jpg);
-	width: 1150px;
 	border-radius: 25px;
+	margin: 0 20px;
 	margin-bottom: 40px;
 }
 .seo h2 {
@@ -661,7 +671,7 @@ textarea:focus:-ms-input-placeholder {
 
 .news_dispatch {
 	max-width: 100%;
-	width: 1150px;
+	padding: 0 20px;
 	margin-bottom: 40px;
 }
 .news {
@@ -724,12 +734,11 @@ textarea:focus:-ms-input-placeholder {
 .map {
 	position: relative;
 	max-width: 100%;
-	width: 1120px;
+	width: 1160px;
 	height: 430px;
-	margin-left: -20px;
 }
 .map iframe {
-	max-width: calc(100% + 40px);
+	width: 100%;
 	border: none;
 }
 .map_info {
@@ -846,6 +855,7 @@ textarea:focus:-ms-input-placeholder {
 .main_footer {
 	min-height: 103px;
 	border-top: 1px solid #a9bbb1;
+	padding: 0 20px;
 }
 .social {
 	width: 380px;
